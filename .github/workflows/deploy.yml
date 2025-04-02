@@ -35,4 +35,4 @@ jobs:
           folder: out  # Le dossier généré par `next export`
 
       - name: Créer le fichier nojekyll
-        run: touch /out/.nojekyll
+        run: touch ./.nojekyll
