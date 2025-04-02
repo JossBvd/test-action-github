@@ -22,6 +22,12 @@ jobs:
           node-version: 18
           cache: 'npm'
 
+      - name: Cache clean Next
+        run: rm -rf .next/
+  
+      - name: Cache clean Node
+        run: rm -rf node_modules/.cache/
+
       - name: 📦 Install dependencies
         run: npm install
 
@@ -35,4 +41,4 @@ jobs:
           folder: out  # Le dossier généré par `next export`
 
       - name: Créer le fichier nojekyll
-        run: touch ./.nojekyll
+        run: touch ./out/.nojekyll
